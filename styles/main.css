@@ -6,9 +6,11 @@ Roboto
 Edu SA Beginner
 Montserrat
 */
+html {
+	scroll-behavior: smooth;
+}
 
-
-/*:root {
+:root {
 	--accent1 : rgba(60,19,97,1);
 	--accent2 : rgba(82,48,124,1);
 	--accent3 : rgba(102,58,130,1);
@@ -19,18 +21,37 @@ Montserrat
 	--light-grey : rgba(240, 240, 240, 1);
 	--grey : rgba(100,100,100,0.4)
 }
-*/
-:root {
+
+
+/*:root {
 	--accent1 : rgba(236,0,0,1);
 	--accent2 : rgba(236,36,0,1);
 	--accent3 : rgba(236,83,0,1);
-	--accent4 : rgba(124,82,149,1);
+	--accent4 : rgba(236,102,0,1);
 	--accent5 : rgba(236,155,0,1);
 	--accent6 : rgba(236,202,0,1);
 	--light-text : rgba(100,100,100,1);
 	--light-grey : rgba(240, 240, 240, 1);
 	--grey : rgba(100,100,100,0.4)
 }
+*/
+
+
+/*:root {
+	--accent1 : rgba(0,80,115,1);
+	--accent2 : rgba(16,125,172,1);
+	--accent3 : rgba(24,154,211,1);
+	--accent4 : rgba(30,187,215,1);
+	--accent5 : rgba(113,199,236,1);
+	--accent6 : rgba(236,202,0,1);
+	--light-text : rgba(100,100,100,1);
+	--light-grey : rgba(240, 240, 240, 1);
+	--grey : rgba(100,100,100,0.4)
+}
+
+
+*/
+
 
 body {
 	padding: 0px;
@@ -38,6 +59,36 @@ body {
 	background-color: #fff;
 	font-family: 'Montserrat', sans-serif;;
 }
+
+.smooth-down {
+	margin-top: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	width: 2em;
+	height:2em;
+	border-style: solid;
+	border-color: transparent;
+	border-width: 1px;
+	transition: 500ms;
+}
+
+.smooth-down a {
+	text-decoration: blink;
+	color: #000;
+}
+.smooth-down:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	border-color: #000;
+	border-width: 1px;
+}
+.smooth-down:active {
+	transition: 0ms;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 
 .ad {
 	margin: 1em;
@@ -53,7 +104,8 @@ body {
 
 .ad img {
 	transition: 500ms;	
-	width: 10em;
+	width: 15em;
+	border-radius: 20px;
 }
 .ad img:hover {
 	transform: scale(1.1);
@@ -64,8 +116,11 @@ body {
 }
 
 .space {
-	height: 22%;
+	height: 15%;
 }
+
+
+
 .info {
 	color: #fff;
 	padding: 3em;
@@ -97,6 +152,7 @@ body {
 	margin-right:3em;
 	margin-top: 3em;
 	width: 15em;
+	height: 25em;
 	border-radius: 25PX;
 	background-color: var(--light-grey);
 	display: flex;
@@ -111,6 +167,8 @@ body {
 .card img {
 	margin-top: 1em;
 	width: 10em;
+	height: 10em;
+	object-fit: cover;
 	border-radius: 20px;
 	transition:300ms;
 }
@@ -134,13 +192,13 @@ body {
 }
 
 .card:hover {
-	/*margin-top: 0em;*/
-	transform: scale(1.1);
+	margin-top: 0em;
+	/*transform: scale(1.1);*/
 	background-color: transparent;
 }
 
 .heading {
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 	color: #000;
 	font-size: 3em;
 	font-weight: 500;
@@ -244,6 +302,7 @@ body {
 	padding: 0.7em;
 	border-radius: 8px;
 	font-weight: 500;
+	cursor: pointer;
 	margin-bottom: 1em;
 }
 .app-link .app-link-card img{
@@ -263,7 +322,7 @@ body {
 .org-name h1 {
 	color: #000;
 	font-size: 3em;
-	font-weight: 400;
+	font-weight: 600;
 	transition: 500ms;
 }
 .org-name h1:hover {
@@ -279,7 +338,7 @@ body {
 
 .org-name p b {
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: 500;
 	color: var(--accent3);
 }
 
@@ -351,6 +410,8 @@ body {
 	border-radius: 20px;
 	padding: 1em;
 	transition: 300ms;
+	width: 10em;
+	text-align: center;
 }
 
 .about-card:hover {
@@ -360,10 +421,11 @@ body {
 
 .about-card img {
 	object-fit: cover;
-	border-radius: 50%;
-	background-color: var(--accent1);
-	width: 6em;
-	height: 6em;
+	padding: 1em;
+	border-radius: 10px;
+	background-color: var(--accent2);
+	width: 3em;
+	height: 3em;
 }
 
 .about-card p {
@@ -436,4 +498,47 @@ body {
 
 .footer-col p:hover {
 	text-decoration: underline;
+}
+
+.achievers {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-left: 4em;
+	margin-right: 4em;
+	flex-wrap: wrap;
+}
+.achievers-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 3em;
+	border-radius: 20px;
+	padding: 1em;
+	transition: 300ms;
+	width: 10em;
+	text-align: center;
+}
+
+.achievers-card:hover {
+	transform:scale(1.1);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+}
+
+.achievers-card img {
+	object-fit: cover;
+	border-radius: 10px;
+	background-color: var(--accent2);
+	width: 8em;
+	height: 8em;
+}
+
+.achievers-card p {
+	font-weight: 300;
+	color: var(--light-text);
+}
+.achievers-card h1 {
+	font-size: 1em;
+	font-weight: 400;
 }
