@@ -44,6 +44,7 @@
 
 .nav-right a:hover {
 	text-decoration: underline;	
+	cursor: pointer;
 }
 
 .nav-left {

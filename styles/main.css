@@ -9,6 +9,14 @@ Montserrat
 html {
 	scroll-behavior: smooth;
 }
+:root {
+	--light-text : rgba(100,100,100,1);
+	--light-grey : rgba(240, 240, 240, 1);
+	--grey : rgba(100,100,100,0.4);
+	--heading : rgba(63, 63, 63,1);
+	--heading-dark : rgba(45, 45, 45,1);
+}
+
 
 :root {
 	--accent1 : rgba(60,19,97,1);
@@ -17,9 +25,6 @@ html {
 	--accent4 : rgba(124,82,149,1);
 	--accent5 : rgba(180,145,200,1);
 	--accent6 : rgba(188,160,220,1);
-	--light-text : rgba(100,100,100,1);
-	--light-grey : rgba(240, 240, 240, 1);
-	--grey : rgba(100,100,100,0.4)
 }
 
 
@@ -30,9 +35,6 @@ html {
 	--accent4 : rgba(236,102,0,1);
 	--accent5 : rgba(236,155,0,1);
 	--accent6 : rgba(236,202,0,1);
-	--light-text : rgba(100,100,100,1);
-	--light-grey : rgba(240, 240, 240, 1);
-	--grey : rgba(100,100,100,0.4)
 }
 */
 
@@ -44,13 +46,19 @@ html {
 	--accent4 : rgba(30,187,215,1);
 	--accent5 : rgba(113,199,236,1);
 	--accent6 : rgba(236,202,0,1);
-	--light-text : rgba(100,100,100,1);
-	--light-grey : rgba(240, 240, 240, 1);
-	--grey : rgba(100,100,100,0.4)
 }
-
-
 */
+
+/*:root {
+	--accent1 : rgba(2,35,28,1);
+	--accent2 : rgba(0,77,37,1);
+	--accent3 : rgba(17,130,59,1);
+	--accent4 : rgba(72,191,83,1);
+	--accent5 : rgba(145,240,134,1);
+	--accent6 : rgba(236,202,0,1);
+}*/
+
+
 
 
 body {
@@ -81,7 +89,7 @@ body {
 .smooth-down:hover {
 	background-color: rgba(0, 0, 0, 0.1);
 	cursor: pointer;
-	border-color: #000;
+	border-color: rgba(0, 0, 0, 0.4);
 	border-width: 1px;
 }
 .smooth-down:active {
@@ -199,7 +207,7 @@ body {
 
 .heading {
 	margin-bottom: 1em;
-	color: #000;
+	color: var(--heading);
 	font-size: 3em;
 	font-weight: 500;
 }
@@ -266,6 +274,7 @@ body {
 }
 
 .intro .intro-text {
+	color: var(--heading-dark);
 	display: flex;
 	flex-direction: column;
 }
@@ -325,6 +334,11 @@ body {
 	font-weight: 600;
 	transition: 500ms;
 }
+.org-name h2 {
+	align-self: flex-start;
+	color: var(--heading-dark);
+}
+
 .org-name h1:hover {
 	color: var(--accent2);
 	letter-spacing: 4px;
@@ -497,6 +511,7 @@ body {
 }
 
 .footer-col p:hover {
+	cursor: pointer;
 	text-decoration: underline;
 }
 
@@ -541,4 +556,82 @@ body {
 .achievers-card h1 {
 	font-size: 1em;
 	font-weight: 400;
+}
+
+.about-logo {
+	width: 8em;
+	object-fit: cover;
+}
+
+.faculty {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.faculty-card {
+	width: 25em;
+	height: 30em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+	padding: 2em;
+	transition: 500ms;
+	filter: grayscale(100%);
+}
+.faculty-card:hover {
+	filter: grayscale(0%);
+	transform: scale(1.1);
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px;
+}
+.faculty-card img {
+	width: 20em;
+	border-radius: 20px;
+	object-fit: contain;
+	transition: 500ms;
+}
+.faculty-card img:hover {
+	border-radius: 30px;
+	transform: scale(1.1);
+	overflow: hidden;
+}
+.faculty-card-text {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.faculty-card-text h1 {
+	text-align: center;
+	font-weight: 400;
+}
+
+.footer-about {
+    margin: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.footer-about-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 15rem;
+    margin: 1rem;
+}
+.footer-about-card h3 {
+    font-size: 0.9rem;
+    color: var(--heading);
+    margin-bottom: 0.5rem;
+}
+.footer-about-card p {
+    color: var(--light-text);
+    font-weight: 500;
+    font-size: 0.8rem;
 }
