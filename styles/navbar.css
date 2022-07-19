@@ -24,6 +24,17 @@
 .nav-right {
 	color: black;
 }
+.nav-right .reg {
+	color: var(--accent2);
+	transition: 500ms;
+}
+.nav-right .selected {
+	text-decoration: underline;
+	cursor: default;
+}
+.nav-right .selected:hover {
+	cursor: default;
+}
 
 .nav-right a {
 	cursor: inherit;
@@ -55,6 +66,6 @@
 }
 
 .nav-left img {
-	width: 1em;
+	width: 1.5em;
 	margin-right: 0.4em;
 }
