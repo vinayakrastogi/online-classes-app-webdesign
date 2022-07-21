@@ -38,7 +38,6 @@
 
 .nav-right a {
 	cursor: inherit;
-
 	text-decoration: blink;
 	font-size: 1.05em;
 	font-weight: 400;
@@ -47,9 +46,7 @@
 	margin: 1em;
 	margin-left: 0.2em;
 	margin-right: 0.2em;
-
 	transition: 300ms;
-
 	color: #000;
 }
 
@@ -68,4 +65,26 @@
 .nav-left img {
 	width: 1.5em;
 	margin-right: 0.4em;
+}
+@media (max-width: 1044px) {
+	.navbar {
+		display: flex;
+		flex-direction: column;
+	}
+	.nav-right {
+		margin-top: 2em;
+	}
+}
+
+@media (max-width: 786px) {
+	.nav-right {
+		align-items: center;
+		margin-top: 2em;
+		display: flex;
+		flex-direction: column;
+	}
+	.nav-right a {
+		margin: 0px;
+		margin-bottom: 1em;
+	}
 }
